@@ -1,0 +1,4 @@
+FROM ubuntu
+MAINTAINER Swapnil Chandra <swapnilchandu98@gmail.com>
+RUN apt-get update && apt-get install -y default-jdk
+CMD /bin/bash/

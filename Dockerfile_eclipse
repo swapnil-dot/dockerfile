@@ -1,0 +1,13 @@
+FROM ubuntu
+MAINTAINER Swapnil Chandra <swapnilchandu98@gmail.com>
+RUN apt-get update && apt-get -y upgrade
+RUN apt install -y wget \
+vim \
+nmap
+RUN apt install -y default-jdk
+RUN mkdir /usr/local/eclipse
+RUN wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-java-2020-06-R-linux-gtk-x86_64.tar.gz -O /tmp/eclipse.tar.gz
+RUN cd /tmp && tar xf eclipse.tar.gz
+RUN cp -Rv /tmp/ /usr/local/eclipse
+
+
